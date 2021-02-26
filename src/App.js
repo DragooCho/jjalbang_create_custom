@@ -1,4 +1,5 @@
 import React from "react";
+import Preview from "../src/Utility/preview";
 
 function App() {
   const greetings = (e) => {
@@ -9,8 +10,7 @@ function App() {
   return (
     <div>
       <form>
-        <input type="file" id="file" accept="image/*" />
-        {/* 이미지 구간 */}
+        <Preview />
 
         <p>문구</p>
         <input type="text" id="Text input" />
