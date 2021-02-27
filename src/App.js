@@ -5,7 +5,6 @@ function App() {
   const greetings = (e) => {
     e.preventDefault();
     alert("Hello World!");
-    console.log(Image.value);
   };
 
   return (
