@@ -1,6 +1,5 @@
 import React from "react";
-import P5Wrapper from "react-p5-wrapper";
-import sketch from "../src/Utility/sketch";
+import Sketch from "../src/Utility/sketch";
 
 function App() {
   const greetings = (e) => {
@@ -10,7 +9,7 @@ function App() {
 
   return (
     <div>
-      <P5Wrapper sketch={sketch} />
+      <Sketch />
       <form>
         <p>문구</p>
         <input type="text" id="Text input" />

@@ -1,18 +1,23 @@
-function sketch(p) {
-  //   let rotation = 0;
+import React from "react";
+import Sketch from "react-p5";
 
-  p.setup = () => {
-    p.createCanvas(500, 500);
+const sketch = () => {
+  let img;
+
+  const preload = (p) => {
+    img = p.loadImage("8733735.jpg");
   };
 
-  p.draw = () => {
-    if (p.mouseIsPressed) {
-      p.fill(0);
-    } else {
-      p.fill(255);
-    }
-    p.ellipse(p.mouseX, p.mouseY, 80, 80);
+  const setup = (p) => {
+    p.createCanvas(500, 400);
+    p.background(img);
   };
-}
+
+  return (
+    <div>
+      <Sketch setup={setup} preload={preload} />
+    </div>
+  );
+};
 
 export default sketch;
