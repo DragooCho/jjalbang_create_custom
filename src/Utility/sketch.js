@@ -1,34 +1,16 @@
 import React from "react";
-import Sketch from "react-p5";
 
-const sketch = (p) => {
-  let input;
-  let img;
+const sketch = () => {
+  const canvas = document.getElementById("canvas");
 
-  function setup(p) {
-    input = p.createFileInput();
-
-    input.position(0, 0);
-    p.createCanvas(400, 400);
-  }
-
-  function draw(p) {
-    p.textSize(32);
-    p.textAlign(p.CENTER, p.CENTER);
-    p.background(220);
-    if (img) {
-      p.image(img, 0, 0, p.width, p.height);
-    }
-    p.text("word", p.mouseX, p.mouseY);
-    if (p.mouseIsPressed) {
-      p.noLoop();
-    }
-  }
+  const ctx = canvas.getContext("2d");
+  ctx.fillStyle = "green";
+  ctx.fillRect(10, 10, 150, 100);
 
   return (
-    <div>
-      <Sketch setup={setup} draw={draw} />
-    </div>
+    <>
+      <canvas id="canvas"></canvas>
+    </>
   );
 };
 
